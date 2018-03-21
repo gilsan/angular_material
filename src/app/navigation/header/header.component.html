@@ -1,0 +1,30 @@
+
+
+ <mat-toolbar color="primary">
+
+  <div>
+     <button mat-icon-button (click)="onToggleSidenav()">
+       <mat-icon>menu</mat-icon>
+     </button>
+   </div>
+
+   <div><a routerLink="/">LOGO</a></div>
+   <div fxFlex fxLayout fxLayoutAlign="flex-end">
+
+          <button mat-button [matMenuTriggerFor]="menu" style="font-size:20px;" >메뉴</button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item>한식</button>
+            <button mat-menu-item>중식</button>
+          </mat-menu>
+
+          <button mat-button [matMenuTriggerFor]="menu" style="font-size:20px;">종목</button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item>펜싱</button>
+            <button mat-menu-item>달리기</button>
+          </mat-menu>
+          <button mat-button   style="font-size:20px;">운동</button>
+          <button mat-button   style="font-size:20px;">록그아웃 </button>
+
+   </div>
+ </mat-toolbar>
+
